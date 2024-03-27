@@ -21,6 +21,9 @@ app.use(helmet());
 // routes
 app.use("/api/v1/code", compilerRoute);
 app.use("/api/v1/user", userRouter);
+app.get("/home",(req,res)=>{
+  res.json(200).json({message:"get messages"})
+})
 // db connect
 dbConnect();
 //
